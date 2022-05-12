@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+
+body {
+    background: black;
+    
+}
+/* .container
+{
+    
+    
+} */
+a
+{
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+}
+
+canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    opacity: 0.75;
+
+}
+
+.name{
+    font-weight: 550;
+    font-size: 1.65em;
+}
+
+.sidebar {
+    width: 15vw;
+
+ 
+   
+
+
+
+}
+
+.sidebar nav {
+    padding: 35px;
+    position: fixed;
+    z-index: 1;
+}
+
+.sidebar nav li {
+    list-style: none;
+    font-size: 1.45em;
+    padding-bottom: 80px;
+    cursor: pointer;
+}
+
+.sidebar nav li:nth-child(1)::after {
+    
+    content: "";
+    background-color: white;
+    position: absolute;
+    height: 2px;
+    width: 0;
+    left: 36px;
+    top: 65px; 
+    transition: 0.3s; 
+}
+.sidebar nav li:nth-child(1):hover::after {
+    
+    
+    width: 54px;
+     
+}
+
+.sidebar nav li:nth-child(2)::after {
+    
+    content: "";
+    background-color: white;
+    position: absolute;
+    height: 2px;
+    width: 0px;
+    left: 36px;
+    top: 175px;  
+    transition: 0.3s; 
+
+}
+.sidebar nav li:nth-child(2):hover::after {
+    
+    width: 83px;
+     
+}
+.sidebar nav li:nth-child(3)::after {
+    
+    content: "";
+    background-color: white;
+    position: absolute;
+    height: 2px;
+    width: 0px;
+    left: 36px;
+    top: 286px;  
+    transition: 0.5s; 
+}
+
+.sidebar nav li:nth-child(3):hover::after {
+    
+    
+    width: 110px;
+    
+}
+.sidebar nav li:nth-child(4)::after {
+    
+    content: "";
+    background-color: white;
+    position: absolute;
+    height: 2px;
+    width: 0px;
+    left: 36px;
+    top: 395px;  
+    transition: 0.3s; 
+
+}
+.sidebar nav li:nth-child(4):hover::after {
+    
+    
+    width: 138px;
+     
+}
+
+
+#home {
+    /* background-color: red; */
+    height: 100vh;
+    /* background-color: yellow; */
+    width: 1250px;
+    margin-left: 175px;
+    margin-top: 75px;
+   
+    display: flex;
+    /* scroll-snap-align: center; */
+    
+}
+.myinfo
+{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* border: 1px solid white; */  
+    margin-left: 100px;
+    /* background-color: yellow; */
+  
+}
+.mypic
+{
+ /* background-color: green;    */
+ margin-left: 50px;
+ 
+
+}
+.hello
+{
+    font-size: 70px;
+
+}
+.name
+{
+    font-size: 50px;
+    margin-bottom: 20px;
+
+}
+.what
+{
+    font-size: 30px;
+    margin-bottom: 20px;
+
+}
+.littlemore
+{
+    font-size: 20px;
+    margin-bottom: 50px;
+
+}
+.cv,.contact
+{
+    
+    color: white;
+    padding: 20px;
+    font-size: 17px;
+    margin-top: 10px;
+    margin-right: 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    background-color: black;
+    cursor: pointer;
+}
+.cv:hover,.contact:hover,.contact a:hover
+{
+    background-color: white;
+    color: black;
+}
+.harshitimg
+{
+    height: 375px;
+    opacity: 0.80;
+    border: 2px solid white;
+    margin-top: 27px;
+
+}
+#skills
+{
+    height: 100vh;
+    width: 1250px;
+    margin-left: 275px;
+    display: flex;
+    /* background-color: red; */
+     align-items:flex-start;
+    flex-direction: column;
+    padding-top: 100px;
+    /* margin-top: 250px; */
+}
+#skills .bar
+{
+    width: 80%;
+    margin: 20px;
+}
+#skills .bar .item 
+{
+   
+    margin-bottom: 10px;
+}
+#skills .bar .item span
+{
+    /* background-color: yellow; */
+    font-size: 25px;
+} 
+#skills .bar .progress
+{
+    height: 10px;
+    width: 100%;
+    position: relative;
+    background-color: gray;
+    border-radius: 10px;
+    
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: inc 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes inc {
+    100%
+    {
+        transform: scaleX(1);
+    }
+}
+#skills .bar .progress span
+{
+    height: 100%;
+    /* width: 80%; */
+    position: absolute;
+    background-color: green;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: inc 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+#skills .bar .fr span
+{ 
+    width: 80%; 
+}
+#skills .bar .ba span
+{ 
+    width: 60%; 
+}
+#skills .bar .cpp span
+{ 
+    width: 80%; 
+}
+#skills .bar .java span
+{ 
+    width: 70%; 
+}
+#skills .bar .py span
+{ 
+    width: 70%; 
+}
+#skills .bar .progress span::after
+{
+    position: absolute;
+    /* content: "80%"; */
+    color: black;
+    border-radius: 5px;
+    right: 0;
+    top: -10px;
+    font-size: 24px;
+    background-color: white;  
+
+}
+#skills .bar .fr span::after
+{
+    content: "80%";
+
+}
+#skills .bar .ba span::after
+{
+    content: "60%";
+
+}
+#skills .bar .cpp span::after
+{
+    content: "80%";
+
+}
+#skills .bar .java span::after
+{
+    content: "70%";
+
+}
+#skills .bar .py span::after
+{
+    content: "70%";
+
+}
+#contactme
+{
+    height: 100vh;
+    width: 1250px;
+    margin-left: 275px;
+    
+    /* background-color: red; */
+    
+    padding-top: 60px;
+}
+.formcontain
+{
+    /* background-color: yellow; */
+    width: 1000px;
+    height: 500px;
+    margin-left: 20px;
+    border: 5px solid #008F11;
+    padding: 30px;
+}
+.cm>div
+{
+    margin: 15px;
+}
+label
+{
+    width: 30%;
+    font-size: 25px;
+}
+textarea
+{
+    margin-top: 15px;
+}
+input
+{
+    height: 30px;
+    width: 300px;
+    font-size: 20px;
+}
+input,label
+{
+    display: inline-block;
+    /* color: black; */
+}
+input,textarea
+{
+    color: black;
+}
+.cm button
+{
+    color: black;
+    font-size: 24px;
+    height: 40px;
+    width: 150px;
+    margin-top: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.cm button:hover
+{
+    color: white;
+    background-color: black;
+}
+
+
+
+
+
